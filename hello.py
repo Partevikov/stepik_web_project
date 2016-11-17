@@ -5,7 +5,7 @@ def app(environ, start_response):
     
     output = ''
     for key,value in d:
-                output = ouptpu + key + '=' + value +'\n'
+                output = ouptput + key + '=' + value +'\n'
 
     status = '200 OK'
     response_headers = [('Content-type','text/plain')]
