@@ -1,7 +1,7 @@
 from cgi import parse_qsl
 
 def app(environ, start_response):
-    d = parse_qsl(environ['QUERY_STRING'])
+    d = parse_qsl(environ['QUERY_STRING'], true)
     
     output = ''
     for key,value in d:
