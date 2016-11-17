@@ -1,4 +1,4 @@
-def myapp(environ, start_response):
+def app(environ, start_response):
     d = parse_qsl(environ['QUERY_STRING'])
     
     output = ''
