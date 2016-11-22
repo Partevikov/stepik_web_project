@@ -1,4 +1,4 @@
-﻿sudo service nginx stop 
+﻿sudo service nginx stop
 sudo rm -r /etc/nginx/sites-enabled/default
 sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/default
 sudo service nginx start
