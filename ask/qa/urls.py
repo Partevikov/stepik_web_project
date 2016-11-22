@@ -1,4 +1,4 @@
-from view.py import  test
+from qa.views import  test
 
 urlpatterns = patterns('',
     # Examples:
