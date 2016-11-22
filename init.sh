@@ -6,4 +6,4 @@ sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/default
 
 sudo service nginx restart
 #sudo gunicorn -с /etc/gunicorn.d/hello.py hello:app
-sudo gunicorn -b 0.0.0.0:8000 hello:app &
+sudo gunicorn -b 0.0.0.0:8000 ask.qa:test &
