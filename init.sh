@@ -1,6 +1,7 @@
-﻿sudo rm -r /etc/nginx/sites-enabled/default
+﻿sudo service nginx stop 
+sudo rm -r /etc/nginx/sites-enabled/default
 sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/default
-sudo service nginx restart
+sudo service nginx start
 
 sudo rm -r /etc/gunicorn.d/test-wsgi
 sudo rm -r /etc/gunicorn.d/test-django
