@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
-
+from ga.views import test
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     # url(r'^question/$', test),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^question/$', 'qa.views.test'),
+    url(r'^question/', 'qa.views.test'),
 )
