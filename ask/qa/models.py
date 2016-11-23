@@ -5,10 +5,10 @@ from django.contrib.auth.models import User
 class Question(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
-    added_at = models.DateField(null=true)
+    added_at = models.DateField(null=True)
     rating  = models.IntegerField(default=0)
-    author = models.ForeignKey(User, null=true, on_delete=models.SET_NULL)
-    likes = models.ManyToManyField(User)
+    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    likes = models.ManyToManyField(User, related_name="q_to_likes")
     
     objects = QuestionManager()
     
@@ -17,9 +17,9 @@ class Question(models.Model):
     
 class Answer(models.Model):
     text = models.TextField()
-    added_at = models.DateField(null=true)
-    question = models.ForeignKey(User, null=true, on_delete=models.SET_NULL)
-    author = models.ForeignKey(User, null=true, on_delete=models.SET_NULL)
+    added_at = models.DateField(null=True)
+    question = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     
     def __str__(self):
         return self.text
