@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
-from ga.views import test
+from qa.views import test
 admin.autodiscover()
 
 urlpatterns = patterns('',
