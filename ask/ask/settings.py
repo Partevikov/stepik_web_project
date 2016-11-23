@@ -89,7 +89,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/hom/bo/web/debug.log',
+            'filename': '/home/box/web/debug.log',
         },
     },
     'loggers': {
