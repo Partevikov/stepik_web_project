@@ -12,7 +12,7 @@ class Question(models.Model):
     
     objects = QuestionManager()
     
-    def __str__(self)
+    def __str__(self):
         return self.title
     
 class Answer(models.Model):
