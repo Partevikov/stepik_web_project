@@ -24,7 +24,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -85,24 +85,18 @@ STATIC_URL = '/static/'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
     'handlers': {
-            'applogfile': {
-            'level':'DEBUG',
-            'class':'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(BASE_DIR, 'qa.log'),
-            'maxBytes': 1024*1024*15, # 15MB
-            'backupCount': 10,
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/hom/bo/web/debug.log',
         },
     },
     'loggers': {
-        'qa': {
-            'handlers': ['applogfile',],
+        'news': {
+            'handlers': ['file'],
             'level': 'DEBUG',
+            'propagate': True,
         },
-    }
+    },
 }
